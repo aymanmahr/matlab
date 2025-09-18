@@ -1,0 +1,34 @@
+function newt
+    func_str = input('Function : ', 's');
+    f = str2func(['@(x) ' func_str]);
+    x0 = input('your initial point: ');
+    tol = input('Iteration tolerance: ');
+    h = 1e-5;
+    maxIter = 100;
+
+    fprintf('\n');
+
+    for k = 1:maxIter
+        f1 = (f(x0+h) - f(x0-h)) / (2*h);
+        f2 = (f(x0+h) - 2*f(x0) + f(x0-h)) / h^2;
+
+        if abs(f1) < tol
+            fprintf('After %d iterations, the minimum attains =%.5f\n', k-1, x0);
+            return;
+        else
+            fprintf('No terminal condition attained so go to next iteration\n');
+            fprintf('Iteration=%d, x_%d=%.5f\n', k, k, x0);
+            fprintf('first derivative = %.5f\n', f1);
+            fprintf('second derivative= %.5f\n', f2);
+        end
+
+        x1 = x0 - f1 / f2;
+        x0 = x1;
+
+        fprintf('x_%d=%.5f\n', k+1, x1);
+        fprintf('first derivative of x_%d is = %.5f\n\n', k+1, ...
+            (f(x1+h) - f(x1-h)) / (2*h));
+    end
+
+    fprintf('Did not converge within %d iterations\n', maxIter);
+end
