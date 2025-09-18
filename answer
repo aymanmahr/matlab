@@ -1,0 +1,33 @@
+Function : exp(sin(x))+6*atan(x)
+your initial point: 0
+Iteration tolerance: 10^(-6)
+
+No terminal condition attained so go to next iteration
+Iteration=1, x_1=0.00000
+first derivative = 7.00000
+second derivative= 1.00000
+x_2=-6.99999
+first derivative of x_2 is = 0.51084
+
+No terminal condition attained so go to next iteration
+Iteration=2, x_2=-6.99999
+first derivative = 0.51084
+second derivative= 0.66887
+x_3=-7.76372
+first derivative of x_3 is = 0.13121
+
+No terminal condition attained so go to next iteration
+Iteration=3, x_3=-7.76372
+first derivative = 0.13121
+second derivative= 0.39570
+x_4=-8.09532
+first derivative of x_4 is = -0.00033
+
+No terminal condition attained so go to next iteration
+Iteration=4, x_4=-8.09532
+first derivative = -0.00033
+second derivative= 0.41128
+x_5=-8.09452
+first derivative of x_5 is = -0.00000
+
+After 4 iterations, the minimum attains =-8.09452
