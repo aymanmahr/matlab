@@ -16,7 +16,6 @@ function newt
         % Central difference for first and second derivative
         f1 = (f(x0+h) - f(x0-h)) / (2*h);           % f'(x)
         f2 = (f(x0+h) - 2*f(x0) + f(x0-h)) / h^2;   % f''(x)
-
         % Check stopping condition
         if abs(f1) < tol
             fprintf('After %d iterations, the minimum attains =%.5f\n', k-1, x0);
