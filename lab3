@@ -3,9 +3,9 @@ function newt
     f = @(x) exp(sin(x)) + 6*atan(x);
 
     % Parameters
-    tol = 1e-6;          % tolerance
+    tol = 1e-6;          
     h = 1e-5;            % step size for central difference
-    x0 = 0;              % initial guess
+    x0 = 0;              
     maxIter = 100;       % safety limit
 
     fprintf('Function : exp(sin(x))+6*atan(x)\n');
